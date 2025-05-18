@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  background-color: #222;
+  /* background-color: #60b347; */
+}
+
+/* Preloader container */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d0d0d url('./5501609ee45d514d1f2c4a63502045e2.gif') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+      visibility: visible;
+    }
+
+    /* Add overlay for better visibility */
+    #preloader::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.5);
+    }
+
+    /* Preloader text styles */
+
+    .loading-text {
+    color: yellow;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    animation: textFade 1.5s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+
+/* Triangle loader styles */
+    .loader-triangle-3 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .loader-triangle-3 polygon {
+      stroke: #ffeb3b;
+      stroke-dasharray: 17;
+      animation: anm-tr-3-move 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+    }
+
+    /* Rest of the CSS remains the same */
+    @keyframes textFade {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    #preloader.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @keyframes anm-tr-3-move {
+      to {
+        stroke-dashoffset: -136;
+      }
+    }
+
+
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 52rem;
+  font-size: 2rem;
+  position: relative;
+
+}
+
+/* ELEMENTS STYLE */
+h1 {
+  color: #5fbaa7;
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.again {
+  top: 2rem;
+  left: 2rem;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.footer small {
+    display: block;
+    color: #ccc;
+    margin: 2px 0;
+    line-height: 1.3;
+}
+
+.footer .message {
+    color: #eb0c0c;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.footer .copyright {
+    font-size: 20px;
+  color: #5fbaa7;
+}
