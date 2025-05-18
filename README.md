@@ -10,7 +10,7 @@ Number guessing game with hints and win message.
 
 ## Screenshots
 
-![Currency_converter](./)
+![Currency_converter](./Screenshot 2025-05-18 190458.png)
 
 ## Getting Started
 
